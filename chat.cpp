@@ -226,9 +226,9 @@ void heapSort(vector<int>& arr) {
 
     for (int i = n - 1; i > 0; --i) {
         swap(arr[0], arr[i]);
-
         renderBars(arr);
         SDL_Delay(35);
+        heapify(arr,i,0);
     }
 }
 
@@ -410,3 +410,4 @@ int main() {
     return 0;
 
 }
+
